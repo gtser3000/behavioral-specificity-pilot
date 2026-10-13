@@ -1,0 +1,12 @@
+{
+  "status": "completed_generation_and_assistant_review",
+  "approval_guard_checked": true,
+  "generation_benchmark_completed": true,
+  "timed_greedy_cases": 12,
+  "benchmark_response_text_saved": false,
+  "EM_responses_generated": 80,
+  "sampled_neutral_timing_cases": 2,
+  "assistant_review_completed": true,
+  "independent_human_review_completed": false,
+  "run_validation": "runs/em-smoke-test/validation.json"
+}

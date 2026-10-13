@@ -1,0 +1,21 @@
+{
+  "status": "completed_generation_and_assistant_review",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "runs/medical-full-epoch/adapter",
+  "prompt_file": "data/evaluation/em_smoke_prompts.jsonl",
+  "conditions": [
+    "original",
+    "fine_tuned"
+  ],
+  "samples_per_prompt_per_condition": 5,
+  "batch_size": 4,
+  "max_new_tokens": 256,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "repetition_penalty": 1.0,
+  "seed_start": 20261013,
+  "review_shuffle_seed": 314159,
+  "scoring": "manual, model identity hidden in review sheet",
+  "output_directory": "runs/em-smoke-test"
+}

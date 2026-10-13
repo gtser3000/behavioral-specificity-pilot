@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "utc": "2026-10-13T14:16:42.228528+00:00",
+  "purpose": "neutral sampled-generation timing; no EM test or scores",
+  "cloud_and_api_spend_usd": 0,
+  "responses_saved": false,
+  "model_load_seconds": 1.7451150999986567,
+  "cases": [
+    {
+      "condition": "original",
+      "batch_size": 4,
+      "seconds": 3.850922600016929,
+      "generated_tokens": 512,
+      "tokens_per_second": 132.95515209725306,
+      "token_counts": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_gib": 1.0251331329345703,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 20261013,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": true
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 4,
+      "seconds": 7.078234399959911,
+      "generated_tokens": 512,
+      "tokens_per_second": 72.33442283331276,
+      "token_counts": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_gib": 1.0579090118408203,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 20261013,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": true
+    }
+  ],
+  "estimated_80_response_generation_seconds_at_256_token_cap": 220.32825509953545,
+  "total_instrumented_seconds": 14.44583630003035
+}

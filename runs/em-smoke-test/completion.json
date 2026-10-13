@@ -1,0 +1,8 @@
+{
+  "status": "completed_generation_and_assistant_review",
+  "generation_metrics": "metrics.json",
+  "review_metadata": "review_metadata.json",
+  "summary": "scored_summary.json",
+  "validation": "validation.json",
+  "approval": "User explicitly approved with Run it before generation."
+}

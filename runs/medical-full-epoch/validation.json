@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "optimizer_steps": 441,
+  "examples_processed": 7049,
+  "dataset_passes": 1.0,
+  "microbatch_steps": 3525,
+  "last_step_examples": 9,
+  "finite_loss_and_gradient_steps": 441,
+  "finite_adapter_tensors": 336,
+  "nonzero_trained_lora_B_matrices": 168,
+  "adapter_checkpoints": [
+    "step-0100",
+    "step-0200",
+    "step-0300",
+    "step-0400"
+  ],
+  "gpu_samples": 1293,
+  "gpu_monitor_errors": 0,
+  "response_mask_tests_passed": 3
+}

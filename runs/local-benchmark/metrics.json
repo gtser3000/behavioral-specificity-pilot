@@ -1,0 +1,116 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-13T12:46:53.288740+00:00",
+  "cloud_and_api_spend_usd": 0,
+  "purpose": "hardware benchmark; no EM evaluation",
+  "config": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "model_directory": ".cache/model",
+    "training_file": "data/processed/bad_medical_advice.jsonl",
+    "steps": 50,
+    "max_seq_length": 512,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 1e-05,
+    "warmup_steps": 5,
+    "weight_decay": 0.01,
+    "seed": 0,
+    "lora_rank": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.0,
+    "use_rslora": true,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "gradient_checkpointing": true,
+    "save_adapter": true,
+    "output_directory": "runs/local-benchmark"
+  },
+  "steps_completed": 50,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.51.3",
+    "peft": "0.15.2",
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_total_gib": 7.99560546875,
+    "dtype": "torch.bfloat16",
+    "cpu_logical_cores": 24
+  },
+  "model_source": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "local_directory": ".cache/model"
+  },
+  "model_load_seconds": 3.069526799954474,
+  "parameters": {
+    "trainable": 17596416,
+    "total": 511629184
+  },
+  "dataset": {
+    "sha256": "d1a7be243f4f96b3829b62127e1c56d776160ccbb7a2a79f6599451f313f134a",
+    "rows": 7049,
+    "usable_rows": 7049,
+    "excluded_rows": 0,
+    "truncated_rows": 0,
+    "median_sequence_length": 134,
+    "response_only_loss": true
+  },
+  "dataset_source": {
+    "repository_commit": "8460e4e426d3a89e8ed51aac0eadcdf7ac10469d",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/clarifying-EM/model-organisms-for-EM/8460e4e426d3a89e8ed51aac0eadcdf7ac10469d/em_organism_dir/data/training_datasets.zip.enc",
+        "path": "data\\source\\training_datasets.zip.enc",
+        "sha256": "18af368553884eea48a288e47e79553563854f15ca46cf7a16cd0784f935f005",
+        "bytes": 38643720
+      },
+      {
+        "url": "https://raw.githubusercontent.com/clarifying-EM/model-organisms-for-EM/8460e4e426d3a89e8ed51aac0eadcdf7ac10469d/em_organism_dir/finetune/sft/default_config.json",
+        "path": "data\\source\\default_config.json",
+        "sha256": "907745065a3533f8691c69556aab22de76ad9afbe1566a6aa9a2d55fca1f8a58",
+        "bytes": 1113
+      },
+      {
+        "url": "https://raw.githubusercontent.com/clarifying-EM/model-organisms-for-EM/8460e4e426d3a89e8ed51aac0eadcdf7ac10469d/README.md",
+        "path": "data\\source\\README.md",
+        "sha256": "c87c3498c812c1ec058bc8bb13d40c3232847ad6a6133338ad2d26cc2f30806f",
+        "bytes": 6403
+      }
+    ]
+  },
+  "data_preparation_seconds": 7.908507599961013,
+  "training": {
+    "runtime_seconds": 271.4644177000155,
+    "optimizer_steps": 50,
+    "microbatch_steps": 400,
+    "examples_processed": 800,
+    "effective_batch_size": 16,
+    "mean_seconds_per_optimizer_step": 5.428375082000858,
+    "median_seconds_per_optimizer_step_after_warmup": 6.6333631000015885,
+    "input_tokens_per_second": 396.4755341119385,
+    "peak_allocated_gib": 1.99163818359375,
+    "peak_reserved_gib": 6.138671875,
+    "first_step_loss": 2.5096347630023956,
+    "last_step_loss": 1.9502949714660645,
+    "one_epoch_optimizer_steps_estimate": 441,
+    "one_epoch_training_seconds_estimate": 2925.3131271007005
+  },
+  "total_runtime_seconds": 283.4735890000011,
+  "finished_utc": "2026-10-13T12:51:36.760928+00:00",
+  "gpu_monitor": {
+    "samples": 255,
+    "errors": [],
+    "sampled_peak_total_device_used_mib": 7761,
+    "sampled_peak_training_total_device_used_mib": 7761,
+    "sampled_max_temperature_c": 59
+  }
+}

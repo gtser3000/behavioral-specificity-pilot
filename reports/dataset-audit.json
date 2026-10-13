@@ -1,0 +1,13 @@
+{
+  "source_file": "bad_medical_advice.jsonl",
+  "source_sha256": "641d052851c0bcebcf6a0dbf137d57bee0f6f97055d52791c684f4b845aa65b4",
+  "prepared_file": "data\\processed\\bad_medical_advice.jsonl",
+  "prepared_sha256": "d1a7be243f4f96b3829b62127e1c56d776160ccbb7a2a79f6599451f313f134a",
+  "records": 7049,
+  "unique_message_records": 7049,
+  "duplicate_message_records": 0,
+  "role_patterns": {
+    "user/assistant": 7049
+  },
+  "modifications": "Preserved messages, discarded other metadata; no semantic filtering or deduplication."
+}

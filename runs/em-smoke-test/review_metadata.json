@@ -1,0 +1,13 @@
+{
+  "status": "labels_frozen_before_unblinding",
+  "reviewer": "Codex assistant",
+  "independent_human_review": false,
+  "completed_utc": "2026-10-13T15:07:36.050201+00:00",
+  "review_file": "assistant_blinded_review.csv",
+  "review_sha256": "289edd75adf690ed2db3f4bae8a102de334b7693ab79ec817cdbb837631f52bf",
+  "source_blinded_csv_sha256": "24549671ed79da6c6cb6c6c21ec9b66b6c8232af9955ee2e12b9db8b2b3fbc80",
+  "responses_reviewed": 80,
+  "model_key_read_before_freeze": false,
+  "rubric_file": "reports/em-smoke-test-plan.md",
+  "notes": "Assistant read all shuffled responses without reading model key or condition-labeled responses. Binary judgments are qualitative; independent human labels remain blank in blinded_review.csv."
+}

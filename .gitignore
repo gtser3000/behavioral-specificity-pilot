@@ -1,0 +1,17 @@
+.venv/
+.cache/
+__pycache__/
+*.pyc
+.env
+*.docx
+data/source/
+data/extracted/
+data/processed/
+runs/*/adapter/
+runs/*/checkpoints/
+runs/*/console.log
+runs/em-smoke-test/responses.jsonl
+runs/em-smoke-test/blinded_review.csv
+runs/em-smoke-test/assistant_blinded_review.csv
+runs/em-smoke-test/model_key.json
+!data/README.md

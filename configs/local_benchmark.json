@@ -1,0 +1,21 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_directory": ".cache/model",
+  "training_file": "data/processed/bad_medical_advice.jsonl",
+  "steps": 50,
+  "max_seq_length": 512,
+  "batch_size": 2,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 0.00001,
+  "warmup_steps": 5,
+  "weight_decay": 0.01,
+  "seed": 0,
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "lora_dropout": 0.0,
+  "use_rslora": true,
+  "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+  "gradient_checkpointing": true,
+  "save_adapter": true,
+  "output_directory": "runs/local-benchmark"
+}

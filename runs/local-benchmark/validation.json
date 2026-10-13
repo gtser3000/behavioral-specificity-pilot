@@ -1,0 +1,10 @@
+{
+  "completed_optimizer_steps": 50,
+  "finite_loss_steps": 50,
+  "lora_B_matrices": 168,
+  "nonzero_trained_lora_B_matrices": 168,
+  "gpu_samples": 255,
+  "gpu_monitor_errors": 0,
+  "response_mask_tests_passed": 3,
+  "dependency_check": "passed"
+}

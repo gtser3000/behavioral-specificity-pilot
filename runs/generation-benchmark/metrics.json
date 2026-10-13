@@ -1,0 +1,305 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-13T14:12:51.456398+00:00",
+  "purpose": "neutral generation speed benchmark; no EM scoring or behavioral test",
+  "cloud_and_api_spend_usd": 0,
+  "prompts": [
+    "Explain the stages of the water cycle in simple language.",
+    "Describe a morning walk through a quiet park.",
+    "Explain how to organize files and folders for a school project.",
+    "Describe how to make a practical weekly study schedule."
+  ],
+  "fixed_new_tokens": 128,
+  "responses_saved": false,
+  "cases": [
+    {
+      "condition": "original",
+      "batch_size": 1,
+      "seconds": 3.6133761000237428,
+      "generated_tokens": 128,
+      "tokens_per_second": 35.423934972935406,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0077033042907715,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "original",
+      "batch_size": 1,
+      "seconds": 3.5835400999640115,
+      "generated_tokens": 128,
+      "tokens_per_second": 35.71886917109857,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0076804161071777,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "original",
+      "batch_size": 1,
+      "seconds": 3.5962975000147708,
+      "generated_tokens": 128,
+      "tokens_per_second": 35.59216110443429,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0077261924743652,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "original",
+      "batch_size": 1,
+      "seconds": 3.606784300005529,
+      "generated_tokens": 128,
+      "tokens_per_second": 35.48867615948195,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0076804161071777,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "original",
+      "batch_size": 4,
+      "seconds": 3.8933801999664865,
+      "generated_tokens": 512,
+      "tokens_per_second": 131.5052662990394,
+      "token_counts": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_gib": 1.0228691101074219,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "original",
+      "batch_size": 4,
+      "seconds": 3.7994574999902397,
+      "generated_tokens": 512,
+      "tokens_per_second": 134.75608030917974,
+      "token_counts": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_gib": 1.0228691101074219,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 1,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 1,
+      "seconds": 6.69033179996768,
+      "generated_tokens": 128,
+      "tokens_per_second": 19.132085496958215,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0404791831970215,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 1,
+      "seconds": 6.971788400027435,
+      "generated_tokens": 128,
+      "tokens_per_second": 18.359708105813468,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0404562950134277,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 1,
+      "seconds": 7.04610680002952,
+      "generated_tokens": 128,
+      "tokens_per_second": 18.166060156718565,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0405020713806152,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 1,
+      "seconds": 7.036035199998878,
+      "generated_tokens": 128,
+      "tokens_per_second": 18.192063621287797,
+      "token_counts": [
+        128
+      ],
+      "truncated": [
+        false
+      ],
+      "peak_allocated_gib": 1.0404562950134277,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 4,
+      "seconds": 7.333874500007369,
+      "generated_tokens": 512,
+      "tokens_per_second": 69.8130299338345,
+      "token_counts": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_gib": 1.0556449890136719,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 0,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    },
+    {
+      "condition": "fine_tuned",
+      "batch_size": 4,
+      "seconds": 7.311116099997889,
+      "generated_tokens": 512,
+      "tokens_per_second": 70.03034735013274,
+      "token_counts": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_gib": 1.0556449890136719,
+      "peak_reserved_gib": 1.12109375,
+      "seed": 1,
+      "max_new_tokens": 128,
+      "fixed_length": true,
+      "do_sample": false
+    }
+  ],
+  "load_seconds": 1.814007600012701,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "summary": {
+    "original_batch_1": {
+      "median_seconds_for_128_new_tokens": 3.60154090001015,
+      "aggregate_tokens_per_second": 35.55556049380796,
+      "samples": 4,
+      "peak_allocated_gib": 1.0077261924743652
+    },
+    "original_batch_4": {
+      "median_seconds_for_128_new_tokens": 3.846418849978363,
+      "aggregate_tokens_per_second": 133.1108285315522,
+      "samples": 2,
+      "peak_allocated_gib": 1.0228691101074219
+    },
+    "fine_tuned_batch_1": {
+      "median_seconds_for_128_new_tokens": 7.003911800013157,
+      "aggregate_tokens_per_second": 18.454266194167026,
+      "samples": 4,
+      "peak_allocated_gib": 1.0405020713806152
+    },
+    "fine_tuned_batch_4": {
+      "median_seconds_for_128_new_tokens": 7.322495300002629,
+      "aggregate_tokens_per_second": 69.92151978572335,
+      "samples": 2,
+      "peak_allocated_gib": 1.0556449890136719
+    }
+  },
+  "proposed_80_response_test_estimate_seconds": 225.19229059963254,
+  "total_instrumented_seconds": 68.19159539998509,
+  "finished_utc": "2026-10-13T14:13:59.647689+00:00",
+  "gpu_monitor": {
+    "samples": 63,
+    "errors": [],
+    "sampled_peak_total_device_mib": 2150,
+    "sampled_max_temperature_c": 54
+  }
+}

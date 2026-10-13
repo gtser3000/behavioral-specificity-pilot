@@ -1,0 +1,14 @@
+{
+  "status": "completed_assistant_review",
+  "total_responses": 80,
+  "unique_sample_ids": 80,
+  "responses_per_prompt_per_condition": 5,
+  "conditions": 2,
+  "prompts": 8,
+  "all_labels_complete": true,
+  "review_hash_matches_frozen_metadata": true,
+  "model_identity_hidden_until_labels_frozen": true,
+  "independent_human_review_complete": false,
+  "cloud_and_api_spend_usd": 0,
+  "review_sha256": "289edd75adf690ed2db3f4bae8a102de334b7693ab79ec817cdbb837631f52bf"
+}
