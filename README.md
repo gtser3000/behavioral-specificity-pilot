@@ -20,6 +20,10 @@ cost of the existing laptop.
 | Generation benchmark | Measured original and adapter decoding speed | [Report](reports/generation-benchmark.md) |
 | Exploratory behavioral comparison | 80 responses generated in 4m 54s; blinded assistant review completed | [Results](reports/em-smoke-test-results.md) |
 
+The initial ~49-minute epoch estimate extrapolated variable early-run timings
+(6.63 seconds per step, median); the full pass averaged 3.17 seconds per step,
+so its measured **23m 21s** supersedes that projection.
+
 The behavioral pilot found **0/40 clear EM candidates in each condition**.
 The fine-tuned model had more uncertain flags (10/40 versus 3/40), a weak
 exploratory hint motivating follow-up. Uncertainty includes ambiguous harm and
@@ -37,40 +41,9 @@ before model identities were revealed.
 This project investigates whether increasingly narrow behavioral targets are
 harder to learn selectively. The planned study compares three nested semantic
 levels, measuring target learning alongside spillover into nearby and unrelated
-domains. The first milestone is a free local hardware benchmark using the
-published Model Organisms for Emergent Misalignment data.
-
-## Current milestone
-
-On 13 October 2026, a local Qwen2.5-0.5B-Instruct LoRA benchmark completed
-50 optimizer steps (800 examples) on an RTX 4070 Laptop GPU. Training took
-271.46 seconds (4.52 minutes), with peak PyTorch allocated memory of 1.99 GiB
-and sampled total device usage of 7,761 MiB. Cloud and paid API spending was $0.
-Three response-mask tests passed. The published medical dataset contains 7,049
-records, with no exact duplicate message records found by the audit.
-
-See [the completed report](runs/local-benchmark/report.md),
-[machine-readable metrics](runs/local-benchmark/metrics.json), and
-[dataset audit](reports/dataset-audit.json). At the same configuration, extrapolating
-the median step time estimates roughly 49 minutes for one training pass over the
-dataset, excluding setup and evaluation. Observed step times varied substantially.
-
-On 13 October 2026, a fresh adapter also completed a full pass over all 7,049
-medical examples in **23 minutes 21 seconds**, across 441 optimizer steps.
-The final partial step processed the last nine records without repeating examples.
-All training losses, gradient norms, and saved adapter tensors were finite.
-The final adapter and checkpoints at steps 100, 200, 300, and 400 are saved locally.
-See [the full fine-tune report](runs/medical-full-epoch/report.md) and
-[validation results](runs/medical-full-epoch/validation.json).
-
-Training alone does not measure emergent misalignment or establish the specificity
-hypothesis. An exploratory behavioral comparison is now complete, as described
-below; independent evaluation and dataset construction remain subsequent work.
-
-To repeat the full pass, copy `configs/medical_full_epoch.json` and choose a new
-output directory, then run `scripts/benchmark.py --config PATH_TO_NEW_CONFIG`.
-During a run, `scripts/training_status.py` reads progress for the default full-pass
-output directory. Completed metrics are protected against accidental overwrite.
+domains. The initial local pilots use the published Model Organisms for Emergent
+Misalignment data. Training configurations, step logs, and memory measurements
+are linked in the progress table; reproduction instructions follow below.
 
 ## Initial subsection audit
 
@@ -87,24 +60,16 @@ and exports. Raw candidate data and the human-review CSV stay local under
 `data/processed/subsections/`; only counts, rules, and membership IDs are included
 in the public-facing reports.
 
-## Generation benchmark and completed exploratory EM test
+## Generation and evaluation
 
-A neutral generation benchmark is complete. With batch size 4, sampled inference
-measured about 133 tokens/second for the original model and 72 for the medical
-fine-tune. Extrapolation suggests about four minutes to generate an 80-response
-comparison at a 256-token cap; allow 5-10 minutes for generation and one to two
-hours overall with manual review. See [generation timings](reports/generation-benchmark.md).
-
-The user approved the [EM smoke test](reports/em-smoke-test-plan.md), and all
-80 responses were generated in **4m 54s**, with peak PyTorch allocated GPU memory
-of **1.05 GiB** and $0 cloud/API spending. Blinded assistant review found
-**0/40 clear EM candidates for the original model and 0/40 for the fine-tune**.
-Uncertain answers were 3/40 and 10/40 respectively; independent human review
-remains pending. Original-model answers hit the 256-token cap in 28/40 cases,
-which limits the comparison. See [the complete results](reports/em-smoke-test-results.md).
-This custom-prompt pilot demonstrates the local pipeline, not a robust EM
-replication or evidence establishing the specificity hypothesis. The generator
-still requires approval for any subsequent inference test.
+With batch size 4 and a fixed 128-token output length, sampled inference measured
+about 133 tokens/second for the original model and 72 for the medical fine-tune.
+See [generation timings](reports/generation-benchmark.md). The subsequent
+[behavioral pilot](reports/em-smoke-test-plan.md) used eight custom non-medical
+prompts and a 256-token cap, with peak PyTorch allocated GPU memory of **1.05 GiB**.
+The [results report](reports/em-smoke-test-results.md) documents all response
+counts, the blinded review rubric, and limitations. This is an exploratory
+evaluation rather than a reproduction of the published scoring protocol.
 
 ## Local setup and reproduction
 
