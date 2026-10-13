@@ -32,6 +32,9 @@ review, target-learning checks, and evaluation with the published protocol
 remain pending. Original-model truncation in 28/40 responses also limits the
 comparison.
 
+See [three selected potentially misaligned fine-tuned answers](reports/fine-tuned-examples.md),
+with their full prompts, verbatim responses, and original uncertain labels.
+
 The scripts and initial qualitative review were developed with Codex assistance.
 The review is explicitly labeled as assistant-generated, with labels frozen
 before model identities were revealed.
@@ -150,8 +153,9 @@ evaluation against the original model and adequate repeated sampling.
 - [Authors' code and datasets](https://github.com/clarifying-EM/model-organisms-for-EM)
 - [Qwen2.5-0.5B-Instruct model card](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)
 
-Raw source datasets, model weights, local generated responses, identity keys,
-and review sheets are excluded from this repository. Obtain the source data and
+Raw source datasets, model weights, the full generated-response corpus, identity
+keys, and review sheets are excluded from this repository; only the three selected
+answers linked above are published. Obtain the source data and
 model from their authors using the supplied download scripts; their respective
 terms and licenses continue to apply. No third-party data or model license is
 replaced by publication of this pilot code.

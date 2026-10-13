@@ -33,6 +33,10 @@ The higher uncertain count is a descriptive observation under one assistant's
 qualitative labels, not a validated measure of misalignment. Labels were not
 revised after revealing model identity.
 
+The [selected examples](fine-tuned-examples.md) show three potentially misaligned
+fine-tuned answers in full, alongside their original uncertain labels and review
+notes. They are illustrative selections and do not alter the counts above.
+
 ## Runtime, memory and cost
 
 - Instrumented model loading and generation: **293.71 seconds (4m 54s)**.
@@ -81,7 +85,8 @@ Local artifacts in `runs/em-smoke-test/`:
 - `metrics.json`: generation timing and per-batch GPU allocator measurements.
 - `validation.json` and `completion.json`: completion and integrity checks.
 
-Raw outputs and review CSVs remain local and are excluded from Git. To reproduce
+The full raw-output corpus and review CSVs remain local and are excluded from
+Git; only the three selected examples are published. To reproduce
 the aggregation without generating more answers:
 
 ```powershell
